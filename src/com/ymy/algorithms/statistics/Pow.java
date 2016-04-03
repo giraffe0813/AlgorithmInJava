@@ -16,7 +16,7 @@ public class Pow {
         if(n == 1) return x;
         double num;
         if(n % 2 == 0) {
-            num = pow(x, n/2); //这样可以避免计算两边 pow(x,n/2)
+            num = pow(x, n/2); //这样可以避免计算两遍 pow(x,n/2)
             return num * num;
         }
         else {
