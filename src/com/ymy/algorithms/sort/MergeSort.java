@@ -2,8 +2,11 @@ package com.ymy.algorithms.sort;
 
 import com.ymy.algorithms.Util;
 
+import java.util.Arrays;
+
 /**
  * 归并排序 从小到大
+ * 复杂度为O(n*lgn)
  * Created by yemengying on 16/4/3.
  */
 public class MergeSort {
@@ -13,10 +16,11 @@ public class MergeSort {
     }
 
     public static void  mergeSortHelper(int[] arr, int begin, int end){
+        int mid = (begin+end)/2;
         if(begin < end){
-            mergeSortHelper(arr, begin, (begin+end)/2);
-            mergeSortHelper(arr, (begin + end)/2 + 1, end);
-            merge(arr, begin, (end+begin)/2 ,end);
+            mergeSortHelper(arr, begin, mid);
+            mergeSortHelper(arr, mid + 1, end);
+            merge(arr, begin, mid ,end);
         }
 
     }
