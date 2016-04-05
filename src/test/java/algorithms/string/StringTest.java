@@ -3,6 +3,7 @@ package algorithms.string;
 import com.ymy.algorithms.statistics.Fibonacci;
 import com.ymy.algorithms.statistics.GetKthNumber;
 import com.ymy.algorithms.statistics.Pow;
+import com.ymy.algorithms.string.LCP;
 import com.ymy.algorithms.string.LCS;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -26,6 +27,16 @@ public class StringTest {
         int length = LCS.getLCSLength(x,y);
         logger.info("最长公共子序列长度:{}",length);
         LCS.reconstruct(x.length(),y.length());
+    }
+
+    /**
+     * 求字符串数组中字符串的最长公共前缀
+     */
+    @Test
+    public void lcpTest(){
+        String[] arr = {"ba","b","bc"};
+        String prefix = LCP.longestCommonPrefix(arr);
+        logger.info("最长公共前缀是:{}", "".equals(prefix) ? "没有公共前缀":prefix);
     }
 
 
