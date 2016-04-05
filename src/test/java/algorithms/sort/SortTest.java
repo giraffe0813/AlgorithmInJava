@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 public class SortTest {
 
     private static Logger logger = LoggerFactory.getLogger(SortTest.class);
+    int[] testArr = {200,32000,522,121,66,131,33,636,88};
 
     /**
      * 插入排序测试
@@ -23,7 +24,6 @@ public class SortTest {
     @Test
     public void insertionSortTest(){
         logger.info("插入排序测试");
-        int[] testArr = {200,32000,522,121,66,131,33,636,88};
         InsertionSort.insertionSort(testArr);
         Util.print(testArr);
     }
@@ -35,7 +35,6 @@ public class SortTest {
     @Test
     public  void randomQuickSortTest(){
         logger.info("随机化快速排序测试");
-        int[] testArr = {1,2,3,4,5,6,7,8};
         RandomQuickSort.randomQuickSort(testArr);
         Util.print(testArr);
     }
@@ -47,7 +46,6 @@ public class SortTest {
     @Test
     public void quickSortTest(){
         logger.info("快速排序测试");
-        int[] testArr = {200,32000,522,121,66,131,33,636,88};
         QuickSort.quickSort(testArr);
         Util.print(testArr);
     }
@@ -59,7 +57,6 @@ public class SortTest {
     @Test
     public void mergeSortTest(){
         logger.info("归并排序测试");
-        int[] testArr = {200,32000,522,121,66,131,33,636,88};
         MergeSort.mergeSort(testArr);
         Util.print(testArr);
     }

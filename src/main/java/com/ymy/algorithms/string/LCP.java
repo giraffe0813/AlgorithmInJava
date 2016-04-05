@@ -10,12 +10,5 @@ public class LCP {
         return null;
     }
 
-    public static void main(String[] args){
-        // 构造测试用例数组
-        String[] test1 = new String[]{};
-        String[] test;
-
-    }
-
 
 }
