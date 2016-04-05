@@ -1,7 +1,5 @@
 package com.ymy.algorithms.sort;
 
-import com.ymy.algorithms.Util;
-
 /**
  * 快速排序
  * 时间复杂度为O(n*lgn)
@@ -50,12 +48,4 @@ public class QuickSort {
         arr[j] = arr[i];
         arr[i] = temp;
     }
-
-    public static void main(String[] args){
-        int[] testarr = {200,32000,522,121,66,131,33,636,88};
-        QuickSort.quickSort(testarr);
-        Util.print(testarr);
-    }
-
-
 }

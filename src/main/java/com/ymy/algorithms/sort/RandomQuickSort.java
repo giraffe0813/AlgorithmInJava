@@ -1,7 +1,5 @@
 package com.ymy.algorithms.sort;
 
-import com.ymy.algorithms.Util;
-
 import java.util.Random;
 
 /**
@@ -57,9 +55,4 @@ public class RandomQuickSort {
         arr[i] = temp;
     }
 
-    public static void main(String[] args){
-        int[] testarr = {1,2,3,4,5,6,7,8};
-        RandomQuickSort.randomQuickSort(testarr);
-        Util.print(testarr);
-    }
 }

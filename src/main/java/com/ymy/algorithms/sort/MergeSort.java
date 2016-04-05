@@ -1,9 +1,5 @@
 package com.ymy.algorithms.sort;
 
-import com.ymy.algorithms.Util;
-
-import java.util.Arrays;
-
 /**
  * 归并排序 从小到大
  * 复杂度为O(n*lgn)
@@ -57,9 +53,4 @@ public class MergeSort {
         }
     }
 
-    public static void main(String[] args){
-        int[] testarr = {200,32000,522,121,66,131,33,636,88};
-        MergeSort.mergeSort(testarr);
-        Util.print(testarr);
-    }
 }

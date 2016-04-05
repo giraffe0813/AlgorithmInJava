@@ -1,8 +1,4 @@
-package com.ymy.algorithms;
-
-import com.ymy.algorithms.sort.InsertionSort;
-
-import java.util.Arrays;
+package algorithms;
 
 public class Util {
 

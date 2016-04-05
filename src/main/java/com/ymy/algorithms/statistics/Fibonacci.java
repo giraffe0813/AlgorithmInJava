@@ -40,12 +40,4 @@ public class Fibonacci {
     }
 
 
-    public static void main(String[] args){
-        long startTime = System.currentTimeMillis();
-        System.out.println("朴素递归结果:" + Fibonacci.naiveRecurse(45));
-        System.out.println("朴素递归用时:" + (System.currentTimeMillis()-startTime) + "毫秒");
-        startTime = System.currentTimeMillis();
-        System.out.println("自底向上结果:" + Fibonacci.bottomUp(45));
-        System.out.println("自底向上用时:" + (System.currentTimeMillis()-startTime) + "毫秒");
-    }
 }

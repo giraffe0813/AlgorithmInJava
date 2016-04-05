@@ -1,7 +1,5 @@
 package com.ymy.algorithms.sort;
 
-import com.ymy.algorithms.Util;
-
 /**
  * 插入排序 从小到大排序
  * 插入排序的时间复杂度为O(n^2)
@@ -29,15 +27,5 @@ public class InsertionSort {
 
         }
     }
-
-    public static void main(String[] args){
-        int[] testarr = {200,32000,522,121,66,131,33,636,88};
-        InsertionSort.insertionSort(testarr);
-        Util.print(testarr);
-    }
-
-
-
-
 
 }

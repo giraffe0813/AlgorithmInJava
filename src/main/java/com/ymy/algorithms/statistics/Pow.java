@@ -25,11 +25,4 @@ public class Pow {
         }
     }
 
-
-    public static void main(String[] args){
-
-        System.out.println(pow(1.00000,-2147483648));
-
-    }
-
 }

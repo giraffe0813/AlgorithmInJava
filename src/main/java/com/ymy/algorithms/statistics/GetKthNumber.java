@@ -74,12 +74,4 @@ public class GetKthNumber {
         arr[j] = temp;
     }
 
-    public static void main(String[] args) throws Exception {
-
-        int[] arr = {1};
-        int k = 1;
-        int target = getKthNumber(arr,k);
-        System.out.println("第"+ k +"个数字为: " + target);
-
-    }
 }
