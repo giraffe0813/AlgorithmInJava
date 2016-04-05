@@ -24,7 +24,7 @@ public class StringTest {
         String x = "bdcaba";
         String y = "abcbdab";
         int length = LCS.getLCSLength(x,y);
-        System.out.println("最长公共子序列长度"+length);
+        logger.info("最长公共子序列长度:{}",length);
         LCS.reconstruct(x.length(),y.length());
     }
 
