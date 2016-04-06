@@ -7,6 +7,7 @@ import java.util.Random;
  * 无需将数组完全排好序
  * 利用快排中的划分思想
  * 时间复杂度近似为O(n)
+ * eg:[1,3,5,2,4] k=2时,返回2
  * leetcode 第215题的变形
  * Created by yemengying on 16/3/30.
  */

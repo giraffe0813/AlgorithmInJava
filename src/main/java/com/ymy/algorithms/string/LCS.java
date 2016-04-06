@@ -2,6 +2,7 @@ package com.ymy.algorithms.string;
 
 /**
  * 求两个字符串的最长公共子序列(是子序列 不是子串,子序列可以不连续)
+ * 假设两个字符串的长度为m,n 算法时间复杂度为O(m*n)
  * Created by yemengying on 16/4/4.
  */
 public class LCS {
