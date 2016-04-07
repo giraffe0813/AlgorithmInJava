@@ -1,11 +1,9 @@
 package com.ymy.algorithms.statistics;
 
 import com.ymy.algorithms.sort.QuickSort;
-import com.ymy.algorithms.string.LCS;
 
 /**
  * 获得数组中最长自增子序列的长度
- * 时间复杂度为
  * eg:[10,9,2,5,3,7,101,18] 最长自增子序列之一是[2,3,7,101],所以返回4
  * leetcode第300题
  * Created by yemengying on 16/4/5.
@@ -20,7 +18,7 @@ public class LIS {
      * 先利用快排得到排序后的数组[1,2,3,4]
      * 再求两个数组的最长公共子序列的长度,即为[2,3,4]的长度, 也就是最长递增子序列的长度
      * 时间复杂度=快排的复杂度+求最长公共子序列的复杂度 = O(nlgn) + O(n*n) = O(n^2)(数组长度为n)
-     * 这种方法不是很好 会耗费额外的空间 性能也没有solution 2好
+     * 这种方法不是很好 会耗费大量额外的空间 比如:当输入数组长度为2500时 要构造个2500*2500的二维数组
      * @param nums
      * @return
      */
@@ -57,34 +55,52 @@ public class LIS {
         return matrix[firstLen][secondLen];
     }
 
-//    /**
-//     * lcs[i]对应的是以nums[i]为最后一个元素的递增子序列的长度
-//     * lcs的递归公式如下:
-//     * lcs[i] = 1 + Max{lcs[j]} if nums[j] < nums[i] 0<=j<i
-//     * lcs[i] = 1 if对所有0<=j<i nums[j] > nums[i]
-//     * eg:[1,2,0,3]
-//     * lcs[0] = 1
-//     * lcs[1] = 1 + Max{lcs(1)} = 2
-//     * lcs[2] = 1
-//     * lcs[3] = 1 + Max{lcs{1},lcs{2}} = 3
-//     */
-//    private static int[] lcs;
-//
-//    /**
-//     * 解法2:利用动态规划
-//     * 代码来自http://algorithms.tutorialhorizon.com/dynamic-programming-longest-increasing-subsequence/
-//     * @param nums
-//     * @return
-//     */
-//    public static int lengthOfLIS2(int[] nums) {
-//        lcs = new int[nums.length];
-//
-//        return 0;
-//    }
-//
-//    public static int lengthOfLISHelper2(){
-//        return 0;
-//    }
+    /**
+     * lcs[i]对应的是以nums[i]为最后一个元素的递增子序列的长度
+     * lcs的递归公式如下:
+     * lcs[i] = 1 + Max{lcs[j]} if nums[j] < nums[i] 0<=j<i
+     * lcs[i] = 1 if对所有0<=j<i nums[j] > nums[i]
+     * eg:[1,2,0,3]
+     * lcs[0] = 1
+     * lcs[1] = 1 + Max{lcs(1)} = 2
+     * lcs[2] = 1
+     * lcs[3] = 1 + Max{lcs{1},lcs{2}} = 3
+     */
+    private static int[] lis;
 
+    /**
+     * 解法2: 利用动态规划
+     * 代码来自http://algorithms.tutorialhorizon.com/dynamic-programming-longest-increasing-subsequence/
+     * 时间复杂度和解法1一样 需要O(n^2) 但是耗费的空间比1小
+     * @param nums
+     * @return
+     */
+    public static int lengthOfLIS2(int[] nums){
+        if(nums == null) return 0;
+        if(nums.length <= 1) return nums.length;
+        //初始化数组lis
+        lis = new int[nums.length];
+        getLIS(nums);
+        //返回数组中的最大值 lis数组中的最大值就是最长自增子序列的长度
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<lis.length;i++){
+            if(lis[i] > max) max = lis[i];
+        }
+        return max;
+
+    }
+
+    public static void getLIS(int[] nums){
+
+        for(int i = 0; i<nums.length ; i++){
+            for(int j = 0; j < i; j++){
+                if(nums[i] > nums[j]){
+                    lis[i] = (lis[i] < lis[j] + 1) ? lis[j] + 1: lis[i];
+                }
+            }
+            if(lis[i] == 0) lis[i] = 1;
+        }
+
+    }
 
 }
