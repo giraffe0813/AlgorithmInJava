@@ -15,7 +15,7 @@ public class LIS {
     private static Integer[][] matrix; //matrix[i][j] 表示x[0...i-1],y[0..j-1]的最长公共子序列的长度;
 
     /**
-     * solution 1: 利用快排和LCS(最长公共子序列)
+     * 解法1: 利用快排和LCS(最长公共子序列)
      * eg:输入[2,3,4,1]
      * 先利用快排得到排序后的数组[1,2,3,4]
      * 再求两个数组的最长公共子序列的长度,即为[2,3,4]的长度, 也就是最长递增子序列的长度
@@ -56,5 +56,35 @@ public class LIS {
         }
         return matrix[firstLen][secondLen];
     }
+
+//    /**
+//     * lcs[i]对应的是以nums[i]为最后一个元素的递增子序列的长度
+//     * lcs的递归公式如下:
+//     * lcs[i] = 1 + Max{lcs[j]} if nums[j] < nums[i] 0<=j<i
+//     * lcs[i] = 1 if对所有0<=j<i nums[j] > nums[i]
+//     * eg:[1,2,0,3]
+//     * lcs[0] = 1
+//     * lcs[1] = 1 + Max{lcs(1)} = 2
+//     * lcs[2] = 1
+//     * lcs[3] = 1 + Max{lcs{1},lcs{2}} = 3
+//     */
+//    private static int[] lcs;
+//
+//    /**
+//     * 解法2:利用动态规划
+//     * 代码来自http://algorithms.tutorialhorizon.com/dynamic-programming-longest-increasing-subsequence/
+//     * @param nums
+//     * @return
+//     */
+//    public static int lengthOfLIS2(int[] nums) {
+//        lcs = new int[nums.length];
+//
+//        return 0;
+//    }
+//
+//    public static int lengthOfLISHelper2(){
+//        return 0;
+//    }
+
 
 }
