@@ -6,6 +6,7 @@ import com.ymy.algorithms.sort.MergeSort;
 import com.ymy.algorithms.sort.QuickSort;
 import com.ymy.algorithms.sort.RandomQuickSort;
 import com.ymy.algorithms.statistics.*;
+import com.ymy.algorithms.string.LPS1;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -79,5 +80,7 @@ public class StatisticsTest {
         int[] nums = new int[]{10,9,2,5,3,-2,101,18};
         logger.info("最大和为:{}", MaxSubarraySum.getMaxSubArraySum(nums));
     }
+
+
 
 }
