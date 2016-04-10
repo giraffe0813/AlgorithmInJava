@@ -81,6 +81,14 @@ public class StatisticsTest {
         logger.info("最大和为:{}", MaxSubarraySum.getMaxSubArraySum(nums));
     }
 
+    @Test
+    public void coinChange(){
+        int[] coins = new int[]{1,2,5};
+        int amount = 10;
+        int num = CoinChange.coinChange(coins,amount);
+        logger.info("最小硬币数为:{}",num);
+    }
+
 
 
 }
