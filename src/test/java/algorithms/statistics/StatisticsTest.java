@@ -90,5 +90,13 @@ public class StatisticsTest {
     }
 
 
+    @Test
+    public void squareNumbers(){
+        int nums = 10;
+        int minNum = SquareNumbers.getMinNumber(nums);
+        logger.info("平方和为:{}需要的最少的数字为:{}", nums, minNum);
+    }
+
+
 
 }

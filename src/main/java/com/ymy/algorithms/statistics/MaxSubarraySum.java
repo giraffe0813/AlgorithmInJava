@@ -4,6 +4,7 @@ package com.ymy.algorithms.statistics;
  * 求给定数组中相邻子数组(至少包含一个值)和的最大值
  * eg:给定[-2,1,-3,4,-1,2,1,-5,4] 和最大的相邻子数组是[4,-1,2,1] 和为6
  * leetcode 53题
+ * 解法参考:
  * Created by yemengying on 16/4/7.
  */
 public class MaxSubarraySum {
