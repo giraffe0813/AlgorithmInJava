@@ -83,9 +83,15 @@ public class LIS {
         getLIS(nums);
         //返回数组中的最大值 lis数组中的最大值就是最长自增子序列的长度
         int max = Integer.MIN_VALUE;
+        int index = 0;
         for(int i=0;i<lis.length;i++){
-            if(lis[i] > max) max = lis[i];
+            if(lis[i] > max) {
+                max = lis[i];
+                index = i;
+            }
         }
+        //打印自增序列
+        print(nums,index,max);
         return max;
 
     }
@@ -101,6 +107,19 @@ public class LIS {
             if(lis[i] == 0) lis[i] = 1;
         }
 
+    }
+
+
+    public static void print(int[] nums ,int index,int max){
+        String s = "";
+        for(int i = index;i>=0;i--){
+            if(lis[i] == max){
+                s = nums[i] + " " + s;
+                max--;
+            }
+
+        }
+        System.out.print(s);
     }
 
 }

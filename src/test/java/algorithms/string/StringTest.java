@@ -5,6 +5,8 @@ import com.ymy.algorithms.statistics.GetKthNumber;
 import com.ymy.algorithms.statistics.Pow;
 import com.ymy.algorithms.string.LCP;
 import com.ymy.algorithms.string.LCS;
+import com.ymy.algorithms.string.LCS2;
+import com.ymy.algorithms.string.LPS1;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +31,19 @@ public class StringTest {
         LCS.reconstruct(x.length(),y.length());
     }
 
+
+    /**
+     * 求两个字符串的最长公共子串
+     */
+    @Test
+    public void lcs2Test(){
+        String x = "tutorialhorizon";
+        String y = "dynamictutorialProgramming";
+        int length = LCS2.getLengthOfLcs(x,y);
+        logger.info("最长公共子串长度:{}",length);
+        LCS2.reconstruct(x.length(),y.length());
+    }
+
     /**
      * 求字符串数组中字符串的最长公共前缀
      */
@@ -37,6 +52,16 @@ public class StringTest {
         String[] arr = {"ba","b","bc"};
         String prefix = LCP.longestCommonPrefix(arr);
         logger.info("最长公共前缀是:{}", "".equals(prefix) ? "没有公共前缀":prefix);
+    }
+
+    @Test
+    public void LPS1test(){
+        logger.info("指定字符串最长回文子序列测试");
+        String s = "AABCDEBAZ";
+        int length = LPS1.getLengthOfLps(s);
+        logger.info("指定字符串最长回文子序列长度为:{}",length);
+        LPS1.printLps(s,0,s.length()-1);
+
     }
 
 
