@@ -97,6 +97,14 @@ public class StatisticsTest {
         logger.info("平方和为:{}需要的最少的数字为:{}", nums, minNum);
     }
 
+    @Test
+    public void maxProduct(){
+        int n = 5;
+        int maxProduct = MaxmumProductCutting.maxmumProduct(n);
+        logger.info("切割后最大的乘积为:{}", maxProduct);
+
+    }
+
 
 
 }
