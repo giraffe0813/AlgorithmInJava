@@ -64,7 +64,7 @@ public class StringTest {
     @Test
     public void LPS2test(){
         logger.info("指定字符串最长回文子串测试");
-        String s = "abcba";
+        String s = "abcbaaaaaaaa";
         String result = LPS2.getLps(s);
         logger.info("指定字符串最长回文子串为:{}",result);
     }
