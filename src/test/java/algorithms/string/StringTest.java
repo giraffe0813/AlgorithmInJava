@@ -3,10 +3,7 @@ package algorithms.string;
 import com.ymy.algorithms.statistics.Fibonacci;
 import com.ymy.algorithms.statistics.GetKthNumber;
 import com.ymy.algorithms.statistics.Pow;
-import com.ymy.algorithms.string.LCP;
-import com.ymy.algorithms.string.LCS;
-import com.ymy.algorithms.string.LCS2;
-import com.ymy.algorithms.string.LPS1;
+import com.ymy.algorithms.string.*;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,6 +59,14 @@ public class StringTest {
         logger.info("指定字符串最长回文子序列长度为:{}",length);
         LPS1.printLps(s,0,s.length()-1);
 
+    }
+
+    @Test
+    public void LPS2test(){
+        logger.info("指定字符串最长回文子串测试");
+        String s = "abcba";
+        String result = LPS2.getLps(s);
+        logger.info("指定字符串最长回文子串为:{}",result);
     }
 
 
