@@ -1,7 +1,8 @@
 package algorithms.array;
 
 import algorithms.Util;
-import com.ymy.algorithms.array.MergeKSortedArrays;
+import com.ymy.algorithms.arrayAndlist.MergeKSortedArrays;
+import com.ymy.algorithms.arrayAndlist.MergeKSortedList;
 import org.junit.Test;
 
 /**
@@ -22,5 +23,6 @@ public class ArrayTest {
         MergeKSortedArrays m = new MergeKSortedArrays();
         int[] result = m.merge(A);
         Util.print(result);
+
     }
 }
