@@ -1,9 +1,9 @@
 package com.ymy.algorithms.tree;
 
 /**
- * 在二叉搜索树中寻找两个节点的最小公共节点
+ * 在二叉搜索树中寻找两个节点的最小公共节点 比直接在二叉树中要简单
  * 解法参考:http://algorithms.tutorialhorizon.com/lowest-common-ancestor-in-a-binary-tree-not-binary-search-tree/
- * leetcode
+ * leetcode 235题
  * Created by yemengying on 16/4/13.
  */
 public class LCA2 {
