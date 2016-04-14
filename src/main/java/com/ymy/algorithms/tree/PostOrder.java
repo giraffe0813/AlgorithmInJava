@@ -4,6 +4,7 @@ import apple.laf.JRSUIUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 二叉树后序遍历--先访问左子树 在访问右子树 最后访问根节点
@@ -43,16 +44,31 @@ public class PostOrder {
 
     }
 
-
     /**
-     * 解法二:利用stack
+     * 解法二:利用stack 与前序遍历不同需要用两个
      * @param root
      * @return
      */
     public List<Integer> postorderTraversal2(TreeNode root){
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
         if(root == null) return result;
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            stack2.push(node);
+            if(node.left != null){
+                stack.push(node.left);
+            }
+            if(node.right!=null){
+                stack.push(node.right);
+            }
+        }
 
-        return null;
+        while(!stack2.isEmpty()){
+            result.add(stack2.pop().val);
+        }
+        return result;
 
     }
 
