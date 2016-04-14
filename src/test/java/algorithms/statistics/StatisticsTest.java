@@ -105,6 +105,13 @@ public class StatisticsTest {
 
     }
 
+    @Test
+    public void maxProductSubarray(){
+        int[] nums = new int[]{-4,-3};
+        int maxProduct = new MaximumProductSubarray().getMaxProduct(nums);
+        logger.info("子数组的最大乘积:{}",maxProduct);
+    }
+
 
 
 }
