@@ -112,12 +112,14 @@ public class StatisticsTest {
         logger.info("子数组的最大乘积:{}",maxProduct);
     }
 
+
     @Test
-    public void isHappy(){
-        HappyNumber happyNumber = new HappyNumber();
-        int n = 7;
-        boolean flag = happyNumber.isHappy(n);
-        logger.info("数字:{}{}快乐数字",n, flag?"是":"不是");
+    public void bestPrice(){
+        MaxRodPrice price = new MaxRodPrice();
+        int n = 4;
+        int[] values = new int[]{1,5,8,9,10,17,17,20,24,30};
+        int bestPrice = price.bestPrice(n,values);
+        logger.info("切分{}米绳子最大价值是{}",n, bestPrice);
     }
 
 
