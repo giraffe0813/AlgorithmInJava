@@ -124,4 +124,18 @@ public class StatisticsTest {
 
 
 
+    @Test
+    public void minimumSizeSubarray(){
+        MinimumSizeSubarraySum sum = new MinimumSizeSubarraySum();
+        int n = 7;
+        int[] nums = new int[]{1,3,4,5,6};
+        int length = sum.minSubArrayLen(n,nums);
+        logger.info("最小的连续子数组的长度是",length);
+    }
+
+
+
+
+
+
 }
