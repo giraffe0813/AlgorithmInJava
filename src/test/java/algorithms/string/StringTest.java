@@ -70,4 +70,14 @@ public class StringTest {
     }
 
 
+    @Test
+    public void PermutationString(){
+        logger.info("两个字符串是不是相同字符串不同的排列");
+        String s1 = "abcaq";
+        String s2 = "bcaaw";
+        boolean result = new PermutationString().isPermutation(s1,s2);
+        logger.info("结果:{}",result);
+    }
+
+
 }
