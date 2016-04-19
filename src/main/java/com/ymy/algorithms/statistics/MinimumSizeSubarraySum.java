@@ -7,6 +7,12 @@ package com.ymy.algorithms.statistics;
  */
 public class MinimumSizeSubarraySum {
 
+    /**
+     * 算法复杂度O(n)
+     * @param s
+     * @param nums
+     * @return
+     */
     public int minSubArrayLen(int s, int[] nums) {
         if(nums==null || nums.length<1)
             return 0;

@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Arrays;
+
 public class Util {
 
     /**
@@ -10,9 +12,7 @@ public class Util {
         if(arr == null) {
             System.out.println("null");
         }else{
-            for(int item : arr){
-                System.out.println(item);
-            }
+            System.out.println(Arrays.toString(arr));
         }
     }
 }
