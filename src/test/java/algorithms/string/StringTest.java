@@ -79,5 +79,22 @@ public class StringTest {
         logger.info("结果:{}",result);
     }
 
+    @Test
+    public void splitString(){
+        logger.info("测试分割字符串的最小数目");
+        String s = "cdcdddcdadcdcdcd";
+        SplitString split = new SplitString();
+        long startTime = System.currentTimeMillis();
+        logger.info("使用动态规划结果:{}",split.getMinmumWithDp(s));
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        logger.info("使用动态规划耗费时间:{} " , elapsedTime);
+        startTime = System.currentTimeMillis();
+        logger.info("使用递归结果:{}", split.getMinmumWithRecursion(s));
+        stopTime = System.currentTimeMillis();
+        elapsedTime = stopTime - startTime;
+        logger.info("使用递归耗费时间:{}",elapsedTime);
+    }
+
 
 }

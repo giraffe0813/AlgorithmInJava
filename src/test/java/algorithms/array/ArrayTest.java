@@ -3,6 +3,7 @@ package algorithms.array;
 import algorithms.Util;
 import com.ymy.algorithms.arrayAndlist.MergeKSortedArrays;
 import com.ymy.algorithms.arrayAndlist.MergeKSortedList;
+import com.ymy.algorithms.arrayAndlist.SearchInsertPosition;
 import com.ymy.algorithms.arrayAndlist.SearchRotateSortedArray;
 import org.junit.Test;
 
@@ -32,5 +33,13 @@ public class ArrayTest {
         SearchRotateSortedArray s = new SearchRotateSortedArray();
         int[] arr = new int[]{3,1};
         s.search(arr,3);
+    }
+
+
+    @Test
+    public void searchInsertPosition(){
+        SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
+        int[] arr = new int[]{1,3};
+        int position = searchInsertPosition.searchInsert(arr,2);
     }
 }
