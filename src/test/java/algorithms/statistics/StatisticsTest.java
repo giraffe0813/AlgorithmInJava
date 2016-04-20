@@ -122,6 +122,13 @@ public class StatisticsTest {
         logger.info("切分{}米绳子最大价值是{}",n, bestPrice);
     }
 
+    @Test
+    public void twoSum(){
+        TwoSum sum = new TwoSum();
+        int[] values = new int[]{1,5,8,9};
+        sum.twoSum(values,13);
+    }
+
 
 
 }
