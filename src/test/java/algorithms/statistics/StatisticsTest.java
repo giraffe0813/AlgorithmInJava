@@ -140,6 +140,13 @@ public class StatisticsTest {
         logger.info("最小的连续子数组的长度是",length);
     }
 
+    @Test
+    public void uniquePath(){
+        UniquePath uniquePath = new UniquePath();
+        int nums = uniquePath.uniquePaths(3,5);
+        logger.info("不同的路径:{}",nums);
+    }
+
 
 
 
