@@ -1,13 +1,15 @@
 package algorithms.sort;
 
 import algorithms.Util;
-import com.ymy.algorithms.sort.InsertionSort;
-import com.ymy.algorithms.sort.MergeSort;
-import com.ymy.algorithms.sort.QuickSort;
-import com.ymy.algorithms.sort.RandomQuickSort;
+import com.sun.deploy.util.StringUtils;
+import com.ymy.algorithms.sort.*;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * 排序算法测试用例
@@ -59,6 +61,19 @@ public class SortTest {
         logger.info("归并排序测试");
         MergeSort.mergeSort(testArr);
         Util.print(testArr);
+    }
+
+
+    @Test
+    public void sortByLastName(){
+        logger.info("根据last name排序");
+        List<String> name = new ArrayList<>();
+        name.add("Daenerys Targaryen");
+        name.add("Jon Show");
+        name.add("Tyrion Lannister");
+        name.add("Joffrey Baratheon");
+        SortByLastName.sort(name);
+        logger.info("排序后的结果:{}",StringUtils.join(name,","));
     }
 
 
