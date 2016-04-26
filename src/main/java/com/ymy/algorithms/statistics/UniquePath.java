@@ -8,8 +8,7 @@ package com.ymy.algorithms.statistics;
 public class UniquePath {
 
     private Integer[][] dp;
-    
-    
+
     /**
      * dp[i][j] = Math.max{dp[i-1][j-1] * 2, dp[i-1][j]+dp[i][j] }
      * 利用动态规划
