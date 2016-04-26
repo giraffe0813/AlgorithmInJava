@@ -14,7 +14,21 @@ public class UniquePath2 {
         int row = obstacleGrid.length;
         int column = obstacleGrid[0].length;
         dp = new Integer[row][column];
-        dp[0][0] = (obstacleGrid[0][0] == 0)? 1 : 0;
+        int value = 1;
+        //初始化
+        for(int i =0;i<column;i++){
+            if(obstacleGrid[0][i] == 1){
+                value = 0;
+            }
+            dp[0][i] = value;
+        }
+        value = 1;
+        for(int i =0;i<row;i++){
+            if(obstacleGrid[i][0] == 1){
+                value = 0;
+            }
+            dp[i][0] = value;
+        }
         return getPath(obstacleGrid,row,column);
 
     }
