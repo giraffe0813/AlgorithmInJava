@@ -36,7 +36,16 @@ public class UniquePath2 {
     private int getPath(int[][] obstacleGrid,int m, int n) {
         if(obstacleGrid[m-1][n-1] == 1) return 0;
         if(dp[m-1][n-1] == null){
-            dp[m-1][n-1] = Math.max(getPath(obstacleGrid,m-1,n-1)*2, getPath(obstacleGrid,m-1,n) + getPath(obstacleGrid,m,n-1));
+            int up = getPath(obstacleGrid,m-1,n);
+            int left = getPath(obstacleGrid,m,n-1);
+            int product = 2;
+            if((left == 0 && up == 0) ){
+                product = 0;
+            }else if(left == 0 || up == 0){
+                product = 1;
+            }
+            int corner = getPath(obstacleGrid,m-1,n-1) * product;
+            dp[m-1][n-1] = Math.max(corner,up+left);
         }
         return dp[m-1][n-1];
     }
